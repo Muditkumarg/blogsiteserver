@@ -1,4 +1,7 @@
 const blogPostData = require("../Model/Schema");
+const getData = (req, res) => {
+  res.json("I am getData methode");
+};
 
 const PostBlogReq = async (req, res) => {
   try {
@@ -29,4 +32,4 @@ const getBlogReq = async (req, res) => {
     }
   });
 };
-module.exports = { PostBlogReq, getBlogReq };
+module.exports = { PostBlogReq, getBlogReq, getData };
