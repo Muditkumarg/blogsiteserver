@@ -10,11 +10,11 @@ app.use(express.json());
 const server = http.createServer(app);
 app.use(cors());
 dotenv.config();
-// app.use(
-//   cors({
-//     origin: "https://localhost:3000",
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://localhost:3000",
+  })
+);
 app.use((req, res, next) => {
   console.log("HTTP Method " + req.method + "URL" + req.url);
   next();
